@@ -1,0 +1,14 @@
+{
+  "name": "adapt-rateContent",
+  "version": "1.0.0",
+  "framework": ">=5.14.0",
+  "homepage": "https://github.com/nachocinalli/adapt-rateContent",
+  "bugs": "https://github.com/nachocinalli/adapt-rateContent/issues",
+  "component": "rateContent",
+  "targetAttribute": "_rateContent",
+  "displayName": "Rate content",
+  "description": "Allows users to rate content.",
+  "main": "/js/adapt-rateContent.js",
+  "keywords": ["adapt-plugin", "adapt-component"],
+  "license": "GPL-3.0"
+}

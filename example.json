@@ -1,0 +1,31 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "rateContent",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Rate Content",
+  "displayTitle": "Was this content helpful?",
+  "body": "Please, take a moment to let us know if you found this content helpful.",
+  "instruction": "",
+  "feedback": "Thank you for your feedback!",
+  "_setCompletionOn": "rated",
+  "_buttons": [
+    {
+      "buttonText": "Yes",
+      "ariaLabel": "Yes",
+      "value": 5,
+      "_classes": ""
+    },
+    {
+      "buttonText": "No",
+      "ariaLabel": "No",
+      "value": 1,
+      "_classes": ""
+    }
+  ],
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}

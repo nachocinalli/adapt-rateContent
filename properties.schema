@@ -1,0 +1,104 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"$ref": "http://localhost/plugins/content/component/model.schema",
+	"globals": {
+		"ariaRegion": {
+			"type": "string",
+			"required": true,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"translatable": true
+		}
+	},
+	"properties": {
+		"_supportedLayout": {
+			"type": "string",
+			"required": true,
+			"enum": ["full-width", "half-width", "both"],
+			"default": "both",
+			"editorOnly": true
+		},
+		"instruction": {
+			"type": "string",
+			"required": false,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"help": "This is the instruction text",
+			"translatable": true
+		},
+		"_setCompletionOn": {
+			"type": "string",
+			"required": true,
+			"enum": ["inview", "rated"],
+			"default": "inview",
+			"title": "Set completion on",
+			"inputType": {
+				"type": "Select",
+				"options": ["inview", "rated"]
+			},
+			"validators": ["required"],
+			"help": ""
+		},
+		"_buttons": {
+			"type": "array",
+			"required": false,
+			"title": "Buttons",
+			"items": {
+				"type": "object",
+				"required": false,
+				"properties": {
+					"buttonText": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Text",
+						"inputType": "Text",
+						"validators": [],
+						"help": "This is the text of the button",
+						"translatable": true
+					},
+					"ariaLabel": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Aria label",
+						"inputType": "Text",
+						"validators": [],
+						"help": "This is the aria label of the button",
+						"translatable": true
+					},
+					"value": {
+						"type": "number",
+						"required": true,
+						"default": "",
+						"title": "Value",
+						"inputType": "Number",
+						"validators": ["required", "number"],
+						"help": "This is the value of the button"
+					},
+					"_classes": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Classes",
+						"inputType": "Text",
+						"validators": [],
+						"help": "This is the classes of the button"
+					}
+				}
+			}
+		},
+		"feedback": {
+			"type": "string",
+			"required": false,
+			"default": "Thank you for your feedback!",
+			"inputType": "TextArea",
+			"validators": [],
+			"help": "This is the feedback"
+		}
+	}
+}

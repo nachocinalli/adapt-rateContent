@@ -1,0 +1,85 @@
+{
+  "$anchor": "rateContent-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported layout",
+          "default": "both",
+          "enum": ["full-width", "half-width", "both"],
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "instruction": {
+          "type": "string",
+          "title": "Instruction",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_setCompletionOn": {
+          "type": "string",
+          "title": "Completion criteria",
+          "description": "",
+          "default": "inview",
+          "enum": ["inview", "rated"],
+          "_backboneForms": "Select"
+        },
+        "_buttons": {
+          "type": "array",
+          "title": "Items",
+          "items": {
+            "type": "object",
+            "properties": {
+              "buttonText": {
+                "type": "string",
+                "title": "Text",
+                "description": "",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "ariaLabel": {
+                "type": "string",
+                "title": "Text",
+                "description": "",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "default": ""
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "default": ""
+              }
+            }
+          }
+        },
+        "feedback": {
+          "type": "string",
+          "title": "Feedback",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          },
+          "_backboneForms": "TextArea"
+        }
+      }
+    }
+  }
+}
